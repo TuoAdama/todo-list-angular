@@ -1,4 +1,4 @@
-<form action="#" class="row justify-content-center">
+<form [formGroup]="form" (submit)="onSubmit()" class="row justify-content-center">
   <div class="row my-3">
     <div class="col-6">
       <h4>Ajouter une tâche</h4>
@@ -6,12 +6,12 @@
   </div>
   <div class="row">
     <div class="col-6">
-      <input type="text" class="form-control" placeholder="Titre">
+      <input type="text" class="form-control" placeholder="Titre" formControlName="title">
     </div>
   </div>
   <div class="row my-3">
     <div class="col-6">
-      <select class="form-select" name="status" id="status">
+      <select class="form-select" name="status" id="status" formControlName="status">
         <option value="DONE">À Faire</option>
         <option value="DONE">En cours</option>
         <option value="DONE">Fait</option>
@@ -20,12 +20,12 @@
   </div>
   <div class="row">
     <div class="col-6">
-      <textarea class="form-control" rows="5" placeholder="Description..."></textarea>
+      <textarea class="form-control" rows="5" placeholder="Description..." formControlName="description"></textarea>
     </div>
   </div>
   <div class="row mt-3">
     <div class="col-6 text-center">
-      <button class="btn btn-primary">Enregistrer</button>
+      <button  type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
   </div>
 </form>
