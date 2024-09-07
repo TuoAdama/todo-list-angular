@@ -14,7 +14,6 @@ import {Todo} from "../../models/Todo";
 })
 export class HomeComponent {
 
-  protected readonly Status = Status;
   todos: Todo[] = [
     {title: "Todo 1", description: "this a description 1", status: Status.TODO},
     {title: "Todo 2", description: "this a description 2", status: Status.LOADING},
